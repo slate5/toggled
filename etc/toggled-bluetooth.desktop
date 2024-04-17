@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Bluetooth toggle
+Comment=Toggle bluetooth.service
+Exec=toggled bluetooth.service
+Icon=toggled-bluetooth
+Categories=Utility
+Keywords=bt;bluetooth;toggled;
+OnlyShowIn=XFCE;
+Terminal=false
+StartupNotify=false

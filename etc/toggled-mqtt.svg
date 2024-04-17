@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="512px"
+   height="512px"
+   id="svg4"
+   sodipodi:docname="toggled-mqtt.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.2111966"
+     inkscape:cx="181.22574"
+     inkscape:cy="285.66791"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="0"
+     inkscape:window-y="323"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     d="M 227.34928,512 H 25.74932 A 25.855992,25.867856 0 0 1 0,486.2602 V 290.3304 H 1.5146598 C 124.90664,290.3304 225.59994,389.57588 227.34928,512 Z m 162.26128,0 H 303.31724 C 301.54658,346.63354 166.29328,212.83355 0,212.08654 V 128.76302 H 1.5146598 C 214.48528,128.76302 388.0959,300.44705 389.61056,512 Z m 96.63998,0 H 465.5572 C 464.0852,257.52603 255.89326,51.266171 0,50.519163 V 25.761137 C 0,11.632005 11.60534,0.02134016 25.74932,0.02134016 H 188.73594 C 335.63724,53.03765 453.48254,166.1348 511.99986,309.53921 V 486.49499 C 511.99986,500.64546 500.39452,512 486.25054,512 Z M 356.5439,0.02134016 H 486.50654 A 25.38666,25.398307 0 0 1 511.99986,25.505014 V 151.72821 C 492.58654,125.22007 468.35188,95.168963 444.62922,71.435407 417.87722,44.927263 386.60256,20.958945 356.56524,0 Z"
+     id="path4"
+     style="fill:#eeeeec;stroke-width:21.3383;fill-opacity:1" />
+</svg>

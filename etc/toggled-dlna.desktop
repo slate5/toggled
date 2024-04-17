@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DLNA toggle
+Comment=Toggle minidlna.service
+Exec=toggled minidlna.service
+Icon=toggled-dlna
+Categories=Utility
+Keywords=dlna;minidlna;toggled;
+OnlyShowIn=XFCE;
+Terminal=false
+StartupNotify=false

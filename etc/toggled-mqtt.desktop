@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=MQTT toggle
+Comment=Toggle mosquitto
+Exec=toggled mosquitto
+Icon=toggled-mqtt
+Categories=Utility
+Keywords=mqtt;mosquitto;toggled;
+OnlyShowIn=XFCE;
+Terminal=false
+StartupNotify=false

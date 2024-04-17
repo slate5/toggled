@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=FTP toggle
+Comment=Toggle proftpd
+Exec=toggled proftpd
+Icon=toggled-ftp
+Categories=Utility
+Keywords=ftp;proftpd;toggled;
+OnlyShowIn=XFCE;
+Terminal=false
+StartupNotify=false

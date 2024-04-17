@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=SSH toggle
+Comment=Toggle ssh
+Exec=toggled ssh
+Icon=toggled-ssh
+Categories=Utility
+Keywords=ssh;secure-shell;toggled;
+OnlyShowIn=XFCE;
+Terminal=false
+StartupNotify=false

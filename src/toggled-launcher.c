@@ -59,7 +59,7 @@ static int resolve_pathname(char *resolved_path)
 	return status;
 }
 
-static char *remove_extension(char *restrict str, const char *restrict ext)
+static bool remove_extension(char *restrict str, const char *restrict ext)
 {
 	size_t i = 0;
 	size_t size_str = 0;
@@ -80,9 +80,11 @@ static char *remove_extension(char *restrict str, const char *restrict ext)
 
 	if (size_ext == i) {
 		str[size_str - i] = '\0';
+
+		return true;
 	}
 
-	return str;
+	return false;
 }
 
 static int modify_file_inplace(const char *filename, const char *toggle)
@@ -112,12 +114,31 @@ static int modify_file_inplace(const char *filename, const char *toggle)
 		file_size += line_len;
 
 		if (!strncmp(line, find_line, strlen(find_line))) {
+			const char *extensions[] = {".svg", ".png", ".jpg", ".jpeg", "-on", "-off"};
+			size_t ext_size = sizeof(extensions) / sizeof(extensions[0]);
+			size_t idx = 0;
+
 			strcpy(replace_line, line);
 			remove_extension(replace_line, "\n");
-			remove_extension(replace_line, "-on");
-			remove_extension(replace_line, "-off");
-			strcat(replace_line, "-");
-			strcat(replace_line, toggle);
+
+			for (; idx < ext_size; ++idx) {
+				if (remove_extension(replace_line, extensions[idx])) {
+					break;
+				}
+			}
+
+			if (idx < ext_size - 2) {
+				if (!remove_extension(replace_line, "-on")) {
+					remove_extension(replace_line, "-off");
+				}
+
+				strcat(replace_line, "-");
+				strcat(replace_line, toggle);
+				strcat(replace_line, extensions[idx]);
+			} else {
+				strcat(replace_line, "-");
+				strcat(replace_line, toggle);
+			}
 
 			size_diff = strlen(replace_line) + 1 - line_len;
 			file_size += size_diff;

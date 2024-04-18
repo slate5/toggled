@@ -25,7 +25,7 @@ Check *README* in [*etc/*](etc/) for more details about adding new desktop entri
 
 ## Usage
 ```bash
-$ toggled service [on|off]
+$ toggled {service|--status|--sync-icons} [on|off]
 ```
 
 ### Example
@@ -40,3 +40,10 @@ for (( i = 0; i < SRANDOM; ++i )); do
 done
 ```
 Some services like to be `toggled`, others not so much (*start-limit-hit*). Toggle consensually...
+
+### Autocomplete
+The first argument will be autocompleted with a service name or {--status|--sync-icons}, and the second with [on|off].
+```bash
+toggled <tab><tab>
+```
+Only **running** services are shown if the first argument is empty. Otherwise, it autocompletes any service name.

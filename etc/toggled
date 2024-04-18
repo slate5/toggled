@@ -1,0 +1,90 @@
+# toggled completion                                 -*- shell-script -*-
+# vi: ft=bash
+
+__toggled_services() {
+    local mode=${1}
+    shift 1
+
+    if [ "${2}" = "--state" ]; then
+        local state="${2} ${3}"
+        shift 2
+    fi
+
+    systemctl ${mode} --type=service ${state} --full --legend=no --no-pager \
+        --plain "${@}" 2>/dev/null | awk '{sub(/.service$/, "", $1); print $1}'
+}
+
+__toggled_info() {
+    local info_msg="${1}"
+
+    local spaces_num=$(( (COLUMNS - ${#info_msg} - 2) / 2 ))
+    (( COLUMNS < ${#info_msg} * 2 )) && (( spaces_num = 0 ))
+
+    local spaces="$(printf "%${spaces_num}s")"
+
+    COMPREPLY=( "${spaces}" "${info_msg}" )
+}
+
+_toggled() {
+    local cur=${COMP_WORDS[COMP_CWORD]} prev=${COMP_WORDS[COMP_CWORD-1]}
+    local standalone_opts='--help --status --sync-icons'
+    local toggle='on off'
+    local all_services
+
+    if [[ "${prev}" == -* && ! "${prev}" =~ ${standalone_opts// /|} ]]; then
+        __toggled_info 'INFO: Unknown flag.'
+
+    elif [[ "${cur}" == -* ]]; then
+        COMPREPLY=( $(compgen -W '${standalone_opts}' -- "${cur,,}") )
+
+    elif [[ "${COMP_WORDS[@]}" =~ ${standalone_opts// /|} ]]; then
+        __toggled_info 'INFO: Standalone flag used.'
+
+    else
+        case ${COMP_CWORD} in
+            1)
+                # Unify those pesky backslashes: `compgen` expects escaped backslashes.
+                # First escapes all backslashes, and then remove double pairs if they
+                # appear. This allows the user to use one or two backslashes, or both
+                # combined, e.g., dev-disk-by\\x2foo\x2bar<tab><tab>
+                if [[ "${cur}" == *\\* ]]; then
+                    cur="${cur//'\'/'\\'}"
+                    cur="${cur//'\\\\'/'\\'}"
+                fi
+
+                if [ -z "${cur}" ]; then
+                    all_services="$(__toggled_services list-units --state running)"$'\n'
+                    all_services+='...'
+                else
+                    all_services="$(__toggled_services list-units)"$'\n'
+                    all_services+="$(__toggled_services list-unit-files "${cur}*")"
+                    all_services="$(sort -u <<< "${all_services}")"
+                fi
+
+                compopt -o filenames
+                COMPREPLY=( $(compgen -W '${all_services}' -- ${cur}) )
+
+                # Reduce the size of comps to 15 chars if there is more then 10
+                if (( ${#COMPREPLY[@]} > 10 )); then
+                    for (( i = 0; i < ${#COMPREPLY[@]}; ++i )); do
+                        COMPREPLY[i]="${COMPREPLY[i]:0:16}"
+
+                        if (( ${#COMPREPLY[i]} > 15 )); then
+                            COMPREPLY[i]="${COMPREPLY[i]:0:15}..."
+                        fi
+                    done
+                fi
+                ;;
+            2)
+                compopt -o nospace
+                COMPREPLY=( $(compgen -W '${toggle}' -- "${cur}") )
+                ;;
+            *)
+                __toggled_info 'INFO: Only one service allowed.'
+                ;;
+        esac
+
+    fi
+}
+
+complete -F _toggled toggled

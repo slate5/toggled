@@ -31,7 +31,7 @@ $ toggled {service|--status|--sync-icons} [on|off]
 ### Example
 `toggled` can be used as a *fidget toy*, allowing manic users to unleash their inner beast in two ways:
 - Do more than 10 CPS on the *XFCE* panel launcher.
-- Run `toggle minidlna` like hell in the terminal.
+- Run `toggled minidlna` like hell in the terminal.
 
 Or, to toggle the crap out of `minidlna`:
 ```bash

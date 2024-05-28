@@ -22,8 +22,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="1.2111966"
-     inkscape:cx="36.740526"
-     inkscape:cy="345.93888"
+     inkscape:cx="232.00197"
+     inkscape:cy="260.07339"
      inkscape:window-width="2560"
      inkscape:window-height="1380"
      inkscape:window-x="1920"
@@ -31,23 +31,39 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4"
      showguides="false" /><g
+     id="g249"
+     style="fill:#eeeeec;fill-opacity:1">
+	<polygon
+   class="st0"
+   points="276.568,386.375 316.112,346.099 276.568,305.59 "
+   id="polygon243"
+   style="fill:#eeeeec;fill-opacity:1" />
+	<polygon
+   class="st0"
+   points="276.568,207.854 316.112,167.33 276.568,127.053 "
+   id="polygon245"
+   style="fill:#eeeeec;fill-opacity:1" />
+	<path
+   class="st0"
+   d="M 409.45,78.174 C 380.566,30.447 344.172,0 255.996,0 167.82,0 131.426,30.447 102.55,78.174 71.632,129.254 67.63,203.238 67.63,256 c 0,52.761 4.002,126.747 34.92,177.833 28.876,47.728 65.27,78.167 153.446,78.167 88.176,0 124.57,-30.439 153.453,-78.167 C 440.36,382.747 444.37,308.762 444.37,256 c 0,-52.762 -4.01,-126.746 -34.92,-177.826 z M 164.536,376.546 137.59,350.244 228.878,256.719 137.59,163.187 164.536,136.885 238.918,213.1 V 34.972 l 129.888,132.276 -87.315,89.47 87.315,89.455 -129.888,132.283 V 300.338 Z"
+   id="path247"
+   style="fill:#eeeeec;fill-opacity:1" />
+</g><path
+     style="fill:#555555;fill-opacity:1;stroke:#ff0000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+     d="M 384,256 A 128,128 0 0 0 256,384 128,128 0 0 0 384,512 128,128 0 0 0 512,384 128,128 0 0 0 384,256 Z"
+     id="path4605-3" /><g
      style="fill:#eeeeec;fill-opacity:1"
-     id="g305"
-     transform="matrix(25.6,0,0,25.6,-51.2,-51.2)"><g
-       fill="#292d32"
-       id="g293"
-       style="fill:#eeeeec;fill-opacity:1"><path
-         d="m 12.9004,10.5919 1.67,-1.53002 -1.67,-1.39 z"
-         id="path287"
-         style="fill:#eeeeec;fill-opacity:1" /><path
-         d="m 12.9004,16.3302 1.67,-1.39 -1.67,-1.53 z"
-         id="path289"
-         style="fill:#eeeeec;fill-opacity:1" /><path
-         d="M 12,2 C 6.48,2 2,6.48 2,12 2,17.52 6.48,22 12,22 17.52,22 22,17.52 22,12 22,6.48 17.52,2 12,2 Z m 3.72,11.95 c 0.29,0.27 0.45,0.64 0.44,1.02 -0.01,0.38 -0.19,0.75 -0.49,1 L 13.6,17.7 c -0.38,0.32 -0.73,0.41 -1,0.41 -0.22,0 -0.39,-0.06 -0.49,-0.1 -0.22,-0.1 -0.72,-0.43 -0.72,-1.34 V 14 l -2.3,2.11 C 8.79,16.39 8.31,16.37 8.03,16.06 7.75,15.75 7.77,15.28 8.08,15 L 11.36,12 8.08,8.99 C 7.78,8.71 7.76,8.24 8.04,7.93 8.32,7.63 8.8,7.6 9.1,7.88 L 11.4,10 V 7.33 c 0,-0.9 0.5,-1.23 0.72,-1.34 0.21,-0.1 0.79,-0.27 1.49,0.3 l 2.06,1.72 c 0.3,0.25 0.48,0.62 0.49,1 0.01,0.38 -0.15,0.76 -0.44,1.02 L 13.58,12 Z"
-         id="path291"
-         style="fill:#eeeeec;fill-opacity:1" /></g></g><circle
-     style="color:#eeeeec;opacity:0.6;fill:#00ff00;fill-opacity:1;stroke:#d2b7b7;stroke-width:0;paint-order:stroke markers fill"
+     id="g883"
+     transform="matrix(11.329705,0,0,11.329705,293.36236,318.21916)"><path
+       d="m 8,7.8 a 2,2 0 1 1 2,-2 2,2 0 0 1 -2,2 z m 0,-3 a 1,1 0 1 0 1,1 1,1 0 0 0 -1,-1 z m 5.66,6.66 a 8,8 0 0 0 0,-11.31 0.5,0.5 0 0 0 -0.71,0 0.48,0.48 0 0 0 0,0.7 7,7 0 0 1 0,9.9 0.5,0.5 0 0 0 0,0.71 0.49,0.49 0 0 0 0.35,0.15 0.51,0.51 0 0 0 0.36,-0.15 z M 11.54,9.34 a 5,5 0 0 0 0,-7.07 0.5,0.5 0 0 0 -0.71,0 0.48,0.48 0 0 0 0,0.7 4,4 0 0 1 0,5.66 0.5,0.5 0 0 0 0,0.71 0.49,0.49 0 0 0 0.35,0.15 0.51,0.51 0 0 0 0.36,-0.15 z m -6.37,0 a 0.5,0.5 0 0 0 0,-0.71 4,4 0 0 1 0,-5.63 0.48,0.48 0 0 0 0,-0.7 0.5,0.5 0 0 0 -0.71,0 5,5 0 0 0 0,7.07 0.51,0.51 0 0 0 0.36,0.15 0.49,0.49 0 0 0 0.35,-0.18 z m -2.12,2.12 a 0.5,0.5 0 0 0 0,-0.71 7,7 0 0 1 0,-9.9 0.48,0.48 0 0 0 0,-0.7 0.5,0.5 0 0 0 -0.71,0 8,8 0 0 0 0,11.31 0.51,0.51 0 0 0 0.36,0.15 0.49,0.49 0 0 0 0.35,-0.15 z"
+       id="path869"
+       style="fill:#eeeeec;fill-opacity:1" /></g><circle
+     style="color:#eeeeec;opacity:0.3;fill:#00ff00;fill-opacity:1;stroke:#d2b7b7;stroke-width:0;paint-order:stroke markers fill"
      id="path477"
      cx="384"
      cy="384"
-     r="128" /></svg>
+     r="128" /><style
+     type="text/css"
+     id="style241">
+	.st0{fill:#000000;}
+</style></svg>

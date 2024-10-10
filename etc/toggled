@@ -26,7 +26,8 @@ __toggled_info() {
 }
 
 _toggled() {
-    local cur=${COMP_WORDS[COMP_CWORD]} prev=${COMP_WORDS[COMP_CWORD-1]}
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    local prev=${COMP_WORDS[COMP_CWORD-1]}
     local standalone_opts='--help --status --sync-icons'
     local toggle='on off'
     local all_services
@@ -61,7 +62,7 @@ _toggled() {
                     all_services="$(sort -u <<< "${all_services}")"
                 fi
 
-                compopt -o filenames
+                compopt +o filenames
                 COMPREPLY=( $(compgen -W '${all_services}' -- ${cur}) )
 
                 # Reduce the size of comps to 15 chars if there is more then 10

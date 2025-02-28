@@ -37,8 +37,8 @@ ifeq ($(filter y,$(MAKECMDGOALS)),y)
 CP_CMD := cp -f
 RM_CMD := rm -f
 else
-CP_CMD := cp -i
-RM_CMD := rm -i
+CP_CMD := - cp -i
+RM_CMD := - rm -i
 endif
 
 ifneq ($(XDG_CURRENT_DESKTOP),XFCE)

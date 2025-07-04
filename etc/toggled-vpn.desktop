@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=VPN toggle
+Comment=Toggle VPN
+Exec=toggled openfortivpn
+Icon=toggled-vpn
+Categories=Utility
+Keywords=vpn;toggled;
+OnlyShowIn=XFCE;
+Terminal=false
+StartupNotify=false
